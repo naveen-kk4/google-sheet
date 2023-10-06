@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google-Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <p>File</p>
+      <p>Insert</p>
+      <p>Home</p>
+      <p>Tools</p>
+      <p>Help</p>
+    </nav>
+    <header>
+      <div class="block-num">A1</div>
+      <span
+        style="
+          font-style: italic;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          margin: 2px;
+        "
+        >fx
+      </span>
+      <div class="actual-text"></div>
+      <div
+        id="left-align"
+        class="material-icons"
+        onclick="activateTextAlign(this)"
+      >
+        format_align_left
+      </div>
+      <div
+        id="center-align"
+        class="material-icons"
+        onclick="activateTextAlign(this)"
+      >
+        format_align_center
+      </div>
+      <div
+        id="right-align"
+        class="material-icons"
+        onclick="activateTextAlign(this)"
+      >
+        format_align_right
+      </div>
+      <div
+        id="underline"
+        class="material-icons"
+        onclick="activateUnderline(this)"
+      >
+        format_underlined
+      </div>
+      <div id="italic" class="material-icons" onclick="activateItalic(this)">
+        format_italic
+      </div>
+      <div id="bold" class="material-icons" onclick="activateBold(this)">
+        format_bold
+      </div>
+      <div id="text-color">
+        <label for="color-picker">
+          <span class="material-icons"
+            >format_color_text
+            <input
+              type="color"
+              id="color-picker"
+              onchange="changeTextColor(this)" /></span
+        ></label>
+      </div>
+      <div id="bg-color">
+        <label for="bg-picker"
+          ><span class="material-icons"
+            >format_paint
+            <input
+              type="color"
+              id="bg-picker"
+              onchange="changeBackGroundColor(this)" /></span
+        ></label>
+      </div>
+      <div class="font-style">
+        <select
+          name="font-styles"
+          id="font-styles"
+          onchange="changeFontFam(this)"
+        >
+          <option value="Monospace">Monospace</option>
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Roboto">Roboto</option>
+          <option value="Impact">Impact</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Cursive">Cursive</option>
+          <option value="Cambria">Cambria</option>
+        </select>
+      </div>
+      <div class="font-size">
+        <select
+          name="font-sizes"
+          id="font-sizes"
+          onchange="changeFontSize(this)"
+        >
+          <option value="16">16</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+
+          <option value="14">14</option>
+
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+        </select>
+      </div>
+    </header>
+    <main></main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
